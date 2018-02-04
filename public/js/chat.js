@@ -84,7 +84,6 @@ $('#message-form').on('submit', function (e) {
     }
 
     socket.emit('createMessage', {
-        from: 'User',
         text: messageTextBox.val()
     }, function () {
         console.log('Fired from form');
