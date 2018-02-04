@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
 
     socket.on('createLocationMessage', (coordinates) => {
         console.log('Coordinates from server', coordinates);
-        io.emit('newLocationMessage', generateLocationMessage('Admin', coordinates.latitude, coordinates.longitude));
+        io.emit('newLocationMessage', generateLocationMessage('User', coordinates.latitude, coordinates.longitude));
     });
 
     socket.on('disconnect', () => {
