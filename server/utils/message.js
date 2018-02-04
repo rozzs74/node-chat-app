@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 const generateMessage = (from, text) => {
     return {
         from,
@@ -15,7 +17,7 @@ const generateLocationMessage = (from, latitude, longitude) => {
 };
 
 const getTime = () => {
-    return new Date().getTime();
+    return moment().valueOf();
 }
 
 module.exports = { generateMessage, generateLocationMessage };
